@@ -1,0 +1,146 @@
+/* Navbar base */
+.navbar {
+    background-color: #111; /* Color ligeramente más claro */
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* Espaciado entre logo y menú */
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    position: relative;
+    z-index: 1000;
+}
+
+/* Menú icono en vista móvil */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transición suave para el icono */
+}
+
+.menu-icon:hover {
+    transform: rotate(90deg); /* Rotación para dar dinamismo */
+}
+
+.icon-bar {
+    background-color: #f1c40f; /* Color amarillo brillante para barras */
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Menú en vista de escritorio y tablet */
+.navBar {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.navBar li {
+    margin: 0 15px;
+}
+
+.navBar a, .logout-button {
+    color: #f7b42c;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 8px; /* Borde redondeado */
+}
+
+.navBar a:hover, .logout-button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    background-color: rgba(74, 219, 52, 0.2); /* Fondo verde translúcido al pasar el cursor */
+}
+
+.logout-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Menú en vista móvil */
+.navBar.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111; /* Fondo del menú móvil */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw; /* Asegura que el menú cubra todo el ancho de la ventana */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: height 0.3s ease-in-out; /* Transición al abrir */
+}
+
+.navBar.open li {
+    margin: 10px 0;
+}
+
+/* Cerrar menú (solo en vista móvil) */
+.close-menu-mobile {
+    background: none;
+    color: #ecf0f1;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #ecf0f1;
+}
+
+/* Media queries para hacer la barra de navegación responsiva */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .navBar {
+        display: none;
+    }
+
+    .navBar.open {
+        display: flex;
+        width: 100vw; /* Asegura que el menú cubra todo el ancho de la ventana en móvil */
+    }
+
+    .close-menu-mobile {
+        display: block;
+    }
+    .navBar a, .logout-button {
+        padding: 12px 15px; /* Espaciado más reducido para móviles */
+        width: 100%;
+        text-align: center;
+        font-size: 16px; /* Texto más pequeño */
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navBar a, .logout-button {
+        font-size: 17px; /* Tamaño intermedio */
+    }
+}

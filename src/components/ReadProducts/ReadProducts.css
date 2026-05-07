@@ -1,0 +1,186 @@
+/* src/components/ReadProducts.css */
+
+/* Estilo para la cuadrícula de productos */
+.products-grid {
+    display: flex; /* Utiliza flexbox para organizar los elementos en línea */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas si no hay suficiente espacio */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 20px; /* Espacio interno alrededor de la cuadrícula */
+    justify-content: flex-start; /* Alinea los elementos al principio de la cuadrícula */
+}
+
+/* Estilo para cada tarjeta de producto */
+.product-card {
+    background-color: #ffffff; /* Color de fondo blanco para la tarjeta */
+    border: 3px solid #ddd; /* Borde gris claro alrededor de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados para la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar un efecto de profundidad */
+    padding: 20px; /* Espacio interno dentro de la tarjeta */
+    width: calc(25% - 20px); /* Ancho de la tarjeta (25% del contenedor menos el espacio) */
+    box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del ancho */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transformaciones y sombras */
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta del producto */
+.product-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el cursor */
+    border: 4px solid #006efe; /* Cambia el borde a azul al pasar el cursor */
+}
+
+/* Estilo para el título del producto dentro de la tarjeta */
+.product-card h3 {
+    margin-top: 0; /* Elimina el margen superior */
+    font-size: 20px; /* Tamaño de fuente para el título */
+    color: #333; /* Color del texto del título */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+/* Estilo para el párrafo dentro de la tarjeta del producto */
+.product-card p {
+    margin: 8px 0; /* Margen superior e inferior */
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    color: #555; /* Color del texto del párrafo */
+}
+
+/* Estilo para texto destacado dentro de la tarjeta */
+.product-card strong {
+    font-weight: 700; /* Peso de la fuente más grueso para el texto fuerte */
+    color: #333; /* Color del texto fuerte */
+}
+
+/* Contenedor para los botones dentro de la tarjeta del producto */
+.button-container {
+    display: flex; /* Utiliza flexbox para organizar los botones en fila */
+    justify-content: space-between; /* Espacio entre los botones */
+    gap: 5px; /* Espacio entre botones */
+}
+
+/* Estilo para los botones dentro de la tarjeta */
+.edit-button, .delete-button, .cart-button {
+    flex: 1; /* Los botones ocuparán el mismo espacio disponible */
+    padding: 10px; /* Espacio interno dentro de los botones */
+    border: none; /* Sin borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados para los botones */
+    color: white; /* Color del texto en los botones */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para el color de fondo y transformación */
+}
+
+/* Estilo específico para el botón de editar */
+.edit-button {
+    min-width: 30%; /* Ancho mínimo del botón de editar */
+    background-color: rgb(0, 72, 255); /* Color de fondo azul */
+}
+
+/* Efecto al pasar el cursor sobre el botón de editar */
+.edit-button:hover {
+    background-color: rgb(0, 50, 180); /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo específico para el botón de eliminar */
+.delete-button {
+    min-width: 30%; /* Ancho mínimo del botón de eliminar */
+    background-color: red; /* Color de fondo rojo */
+}
+
+/* Efecto al pasar el cursor sobre el botón de eliminar */
+.delete-button:hover {
+    background-color: darkred; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo específico para el botón de carrito */
+.cart-button {
+    min-width: 30%; /* Ancho mínimo del botón de carrito */
+    background-color: rgb(16, 167, 26); /* Color de fondo verde */
+}
+
+/* Efecto al pasar el cursor sobre el botón de carrito */
+.cart-button:hover {
+    background-color: rgb(10, 120, 20); /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo para el spinner de carga */
+.spinner {
+    margin: 20px auto; /* Centra el spinner en la página */
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Borde claro alrededor del spinner */
+    border-left-color: #000; /* Color del borde izquierdo negro */
+    border-radius: 50%; /* Hace que el spinner sea redondo */
+    width: 40px; /* Ancho del spinner */
+    height: 40px; /* Altura del spinner */
+    animation: spin 1s linear infinite; /* Animación de giro infinita */
+}
+
+/* Definición de la animación de giro */
+@keyframes spin {
+    to {
+        transform: rotate(360deg); /* Rota 360 grados */
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 1000px) {
+    .product-card {
+        width: calc(50% - 20px); /* Ancho de la tarjeta (50% del contenedor menos el espacio) */
+        padding: 15px; /* Espacio interno reducido */
+    }
+
+    .product-card h3 {
+        font-size: 18px; /* Tamaño de fuente del título reducido */
+    }
+
+    .product-card p {
+        font-size: 14px; /* Tamaño de fuente del párrafo reducido */
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 700px) {
+    .product-card {
+        width: 100%; /* Una tarjeta por fila */
+        padding: 10px; /* Espacio interno reducido */
+    }
+
+    .product-card h3 {
+        font-size: 16px; /* Tamaño de fuente del título aún más reducido */
+    }
+
+    .product-card p {
+        font-size: 13px; /* Tamaño de fuente del párrafo aún más reducido */
+    }
+
+    .button-container {
+        flex-direction: column; /* Organiza los botones en columna */
+        gap: 10px; /* Espacio entre botones */
+    }
+
+    button {
+        width: 100%; /* Botones ocupan el 100% del ancho disponible */
+        padding: 10px; /* Espacio interno para los botones */
+    }
+}
+/* Estilos para el contenedor de la paginación */
+.pagination {
+    display: flex; /* Usar flexbox para el alineamiento */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    margin-top: 20px; /* Espacio arriba del contenedor */
+}
+
+/* Estilos para cada botón de paginación */
+.pagination-button {
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    margin: 0 5px; /* Margen entre botones */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: red; /* Color de fondo por defecto para los botones */
+}
+
+/* Estilo para el botón activo (página seleccionada) */
+.pagination-button.active {
+    background-color: green; /* Color verde para el botón activo */
+}
+

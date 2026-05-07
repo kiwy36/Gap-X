@@ -1,0 +1,205 @@
+/* Estilo general del modal */
+.prestore-modal {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: #ffffff; /* Color de fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 15px; /* Reducir padding */
+    width: 90%;
+    max-width: 400px;
+    animation: slideDown 0.3s ease-out;
+    transition: background-color 0.3s ease; /* Transición al cambiar el fondo */
+}
+
+/* Estilos para resaltar el fondo del modal al pasar el ratón */
+.prestore-modal:hover {
+    background-color: #f8f9fa; /* Color de fondo más claro al pasar el ratón */
+}
+
+/* Animación para que el modal aparezca con una transición */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Fondo oscuro detrás del modal para enfocar la atención */
+.prestore-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Estilos para los elementos dentro del modal */
+.prestore-product {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reducir espaciado */
+}
+
+/* Estilo de los items */
+.prestoreItem {
+    background-color: #f1f1f1; /* Fondo gris claro */
+    padding: 8px; /* Reducir padding */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto al pasar el ratón sobre los items */
+.prestoreItem:hover {
+    transform: scale(1.02); /* Aumentar levemente el tamaño */
+}
+
+/* Estilo de los botones de acción */
+.prestore-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px; /* Reducir margen superior */
+}
+
+.prestore-actions button {
+    padding: 8px 12px; /* Reducir padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Reducir tamaño de fuente */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añadir efecto de transición */
+}
+
+/* Estilo de los botones de acción */
+.PreStore-cancel {
+    background-color: #dc3545;
+    color: white;
+    margin: 0 5px; /* Reducir margen */
+    border-radius: 8px;
+}
+
+.PreStore-cancel:hover {
+    background-color: #c82333;
+    transform: scale(1.05); /* Aumentar al pasar el ratón */
+}
+
+.PreStore-confirm {
+    background-color: #28a745;
+    color: white;
+    margin: 0 5px; /* Reducir margen */
+    border-radius: 8px;
+}
+
+.PreStore-confirm:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Aumentar al pasar el ratón */
+}
+
+/* Estilos para las etiquetas y campos de producto */
+.prestore-product label {
+    font-size: 12px; /* Reducir tamaño de fuente */
+    font-weight: bold;
+    margin-bottom: 4px; /* Reducir margen inferior */
+    display: block;
+}
+
+.prestore-product input[type="number"],
+.prestore-product input[type="text"] {
+    width: 100%;
+    padding: 8px 10px; /* Reducir padding */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px; /* Reducir tamaño de fuente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Estilos al enfocar el input */
+.prestore-product input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Título del modal */
+.prestore-title {
+    font-size: 18px; /* Reducir tamaño de fuente */
+    margin-bottom: 15px; /* Reducir margen inferior */
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    .prestore-modal {
+        width: 95%;
+        padding: 10px; /* Reducir padding */
+    }
+
+    .prestore-actions button {
+        width: 48%;
+    }
+}
+/* Estilo para el contenedor del label y select */
+.prestore-method-label {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Estilo para el select de método de pago */
+.prestore-method-select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #495057;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilo de opciones dentro del select */
+.prestore-method-select option {
+    font-size: 14px;
+    color: #495057;
+}
+
+/* Espaciado superior para separar del contenido anterior */
+.prestore-method-container {
+    margin-top: 10px;
+}
+
+/* Estilos en el modal al pasar el ratón sobre el select */
+.prestore-method-select:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    .prestore-method-select {
+        font-size: 13px;
+        max-width: 100%;
+    }
+}

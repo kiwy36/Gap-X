@@ -1,0 +1,70 @@
+/* src/components/UploadProduct/UploadProduct.css */
+
+/* Estilo general para el formulario de carga */
+.upload-form {
+    display: flex; /* Utiliza flexbox para el diseño */
+    flex-direction: column; /* Apila los elementos en columna */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 40px auto; /* Margen superior e inferior de 40px y centrado horizontalmente */
+    padding: 30px; /* Aumenta el espaciado interno del formulario */
+    background-color: #ffffff; /* Color de fondo blanco */
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para dar profundidad */
+    transition: transform 0.2s ease; /* Efecto de escala suave al pasar el ratón */
+}
+
+
+/* Estilo simplificado para el título */
+.subTitle-uploadProduct {
+    font-size: 36px; /* Tamaño del texto del título */
+    font-weight: 700; /* Peso bold */
+    margin-bottom: 20px; /* Margen inferior para separar del siguiente elemento */
+    text-align: center; /* Centra el texto del título */
+    color: #2980b9; /* Color azul más suave */
+    padding: 10px 0; /* Espaciado interior vertical */
+    border-bottom: 2px solid #3498db; /* Línea inferior para separar visualmente */
+}
+
+/* Estilo para inputs, selects y botones dentro del formulario */
+.upload-form input,
+.upload-form select,
+.upload-form button {
+    margin-bottom: 20px; /* Margen inferior para separar cada elemento */
+    padding: 12px; /* Aumenta el espaciado interno para mayor comodidad */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados para un aspecto suave */
+    font-size: 16px; /* Tamaño del texto en inputs y selects */
+    transition: border-color 0.3s ease; /* Efecto de transición suave para el borde */
+}
+
+/* Estilo para inputs y selects al recibir foco */
+.upload-form input:focus,
+.upload-form select:focus {
+    border-color: #3498db; /* Cambia el color del borde a azul al hacer foco */
+    outline: none; /* Elimina el contorno predeterminado */
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Sombra para dar énfasis al elemento enfocado */
+}
+
+/* Estilo para el botón en el formulario */
+.upload-form button {
+    background-color: #3498db; /* Color de fondo azul del botón */
+    color: #fff; /* Color del texto en blanco */
+    border: none; /* Sin borde para un aspecto limpio */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+    font-size: 18px; /* Aumenta el tamaño del texto en el botón */
+    padding: 15px; /* Aumenta el espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados para suavizar el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transición suave */
+}
+
+/* Estilo para el botón al pasar el ratón sobre él */
+.upload-form button:hover {
+    background-color: #2980b9; /* Cambia el color de fondo al pasar el ratón */
+    transform: translateY(-2px); /* Eleva ligeramente el botón al pasar el ratón */
+}
+
+/* Estilo para el botón deshabilitado */
+.upload-form button:disabled {
+    background-color: #bdc3c7; /* Color de fondo gris para indicar que está deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor a no permitido */
+}

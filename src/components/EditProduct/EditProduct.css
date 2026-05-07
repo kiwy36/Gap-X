@@ -1,0 +1,122 @@
+/* Contenedor principal de edición del producto */
+.edit-product {
+    padding: 20px; /* Espacio interno (padding) para dar más separación interna */
+    max-width: 600px; /* Limitar el ancho máximo a 600px */
+    margin: auto; /* Centrar horizontalmente el contenedor */
+    background-color: #f0f4f8; /* Cambia el fondo a un azul claro suave */
+    border-radius: 12px; /* Bordes más redondeados para un efecto visual más suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para darle profundidad */
+    border: 2px solid #007bff; /* Borde azul brillante para hacer el contenedor más llamativo */
+}
+
+/* Estilos para el título principal h1 */
+.title-edit-product {
+    font-size: 28px; /* Tamaño grande para el título */
+    color: #343a40; /* Color oscuro del texto */
+    font-weight: bold; /* Negrita para resaltar */
+    margin-bottom: 20px; /* Espacio inferior para separar del contenido */
+    text-align: center; /* Centrar el texto */
+    text-transform: uppercase; /* Convertir a mayúsculas para hacerlo más formal */
+}
+
+/* Estilos para los subtítulos h2 */
+.subTitle-edit-product {
+    font-size: 20px; /* Tamaño de fuente medio para los subtítulos */
+    color: #6c757d; /* Gris oscuro para contraste con el fondo */
+    font-weight: 600; /* Seminegrita para resaltar los subtítulos */
+    margin-bottom: 10px; /* Separación inferior entre subtítulo y el siguiente campo */
+    text-transform: capitalize; /* Primera letra de cada palabra en mayúscula */
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 600px) {
+    .title-edit-product {
+        font-size: 24px; /* Reducir el tamaño del título en pantallas pequeñas */
+        margin-bottom: 15px; /* Menor separación en pantallas pequeñas */
+    }
+
+    .subTitle-edit-product {
+        font-size: 18px; /* Ajustar tamaño de subtítulos en pantallas pequeñas */
+    }
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex; /* Establecer que los hijos del formulario se alineen en columnas */
+    flex-direction: column; /* Alineación vertical */
+}
+
+/* Estilos para los inputs, select y textarea del formulario */
+form input,
+form select,
+form textarea {
+    margin: 10px 0; /* Separación superior e inferior de cada campo */
+    padding: 12px; /* Espacio interno para que los campos no se vean apretados */
+    font-size: 16px; /* Tamaño de fuente adecuado para buena lectura */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    background-color: #fff; /* Fondo blanco para que resalten los campos */
+}
+
+/* Estilo específico para el textarea */
+form textarea {
+    resize: vertical; /* Permitir que el usuario ajuste el tamaño vertical del textarea */
+    min-height: 100px; /* Altura mínima para el textarea */
+}
+
+/* Estilos para los botones del formulario */
+button {
+    padding: 12px 20px; /* Espacio interno para los botones */
+    font-size: 16px; /* Tamaño de fuente legible */
+    cursor: pointer; /* Cambiar el cursor a puntero al pasar sobre los botones */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    margin: 5px; /* Espaciado alrededor de los botones */
+    color: #fff; /* Texto blanco */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color en hover */
+}
+
+/* Estilo del botón para enviar (submit-button) */
+button.submit-button {
+    background-color: #28a745; /* Verde para el botón de enviar */
+}
+
+/* Cambiar el color del botón de enviar cuando el mouse está sobre él */
+button.submit-button:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+/* Estilo del botón para cancelar (cancel-button) */
+button.cancel-button {
+    background-color: #dc3545; /* Rojo para el botón de cancelar */
+}
+
+/* Cambiar el color del botón de cancelar cuando el mouse está sobre él */
+button.cancel-button:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Contenedor para agrupar los botones y alinearlos horizontalmente */
+.button-group {
+    display: flex; /* Alineación en fila de los botones */
+    justify-content: space-between; /* Espacio entre los botones */
+    margin-top: 20px; /* Separación superior con el formulario */
+}
+
+/* Ajustes de responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+    .edit-product {
+        padding: 15px; /* Reducir el padding en pantallas pequeñas */
+        max-width: 100%; /* Ajustar el ancho a la pantalla completa */
+    }
+
+    .button-group {
+        flex-direction: column; /* Alinear los botones verticalmente en pantallas pequeñas */
+        align-items: stretch; /* Estirar los botones para que ocupen el ancho disponible */
+    }
+
+    button {
+        width: 100%; /* Hacer que los botones ocupen todo el ancho */
+        margin: 5px 0; /* Separación vertical entre botones */
+    }
+}

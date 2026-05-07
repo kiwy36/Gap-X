@@ -1,0 +1,74 @@
+/* Reset básico */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Asegura que el contenedor raíz ocupe toda la altura */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* El contenedor main debe crecer para llenar el espacio disponible */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #222; /* Color oscuro pero no completamente negro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    border-top: 3px solid #f7b42c; /* Línea superior llamativa */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #f7b42c; /* Color dorado para el texto */
+}
+
+/* ---- Estilos Responsivos ---- */
+
+/* Vista mobile */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+        min-height: 800px; /* Altura mínima más pequeña para móviles */
+    }
+
+    footer {
+        padding: 12px;
+    }
+
+    footer p {
+        font-size: 12px; /* Texto más pequeño en pantallas pequeñas */
+    }
+}
+
+/* Vista tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        padding: 15px;
+        min-height: 900px; /* Altura mínima para tabletas */
+    }
+
+    footer {
+        padding: 13px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}

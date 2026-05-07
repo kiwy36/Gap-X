@@ -1,0 +1,105 @@
+/* src/components/FilterProducts.css */
+.filter-products {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    gap: 20px; /* Espacio entre los elementos */
+    margin: 30px auto; /* Centra el contenedor horizontalmente */
+    padding: 30px; /* Espacio interno (padding) alrededor del contenido */
+    max-width: 550px; /* Ancho máximo del contenedor */
+    background: linear-gradient(145deg, #007bff, #0056b3); /* Fondo con un gradiente diagonal de azul */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Sombra externa para dar profundidad */
+    color: #fff; /* Texto blanco dentro del contenedor */
+    transition: all 0.3s ease; /* Transiciones suaves para cambios visuales */
+}
+
+.filter-products input,
+.filter-products select {
+    padding: 15px; /* Espacio interno (padding) dentro de los campos de texto y select */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente mayor */
+    transition: all 0.3s ease-in-out; /* Transición suave en foco y cambios */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente blanco */
+    color: #333; /* Texto en gris oscuro */
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2); /* Sombra ligera debajo de los campos */
+}
+
+.filter-products input:focus,
+.filter-products select:focus {
+    outline: none; /* Elimina el borde por defecto en foco */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño cuando el campo está en foco */
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.8); /* Sombra más intensa en foco */
+}
+
+.filter-products input::placeholder {
+    color: rgba(0, 0, 0, 0.7); /* Color del texto del placeholder más oscuro */
+}
+
+.filter-products select {
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo casi blanco en el select */
+    font-weight: bold; /* Texto en negrita */
+    color: #0d5eb6; /* Texto en azul */
+}
+
+.filter-products button {
+    padding: 15px 30px; /* Relleno del botón */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #28a745; /* Color verde de fondo */
+    color: #fff; /* Texto blanco */
+    font-size: 18px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor a una mano en hover */
+    transition: all 0.4s ease; /* Transición suave para hover y click */
+    box-shadow: 0px 8px 15px rgba(40, 167, 69, 0.3); /* Sombra verde clara debajo del botón */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.filter-products button:hover {
+    background-color: #218838; /* Cambia el color de fondo en hover */
+    box-shadow: 0px 12px 20px rgba(40, 167, 69, 0.5); /* Sombra más intensa al pasar el cursor */
+    transform: translateY(-5px); /* Eleva el botón ligeramente en hover */
+}
+
+.filter-products button:active {
+    background-color: #1e7e34; /* Color verde más oscuro cuando se presiona el botón */
+    transform: scale(0.98); /* Reduce el tamaño del botón ligeramente cuando se hace clic */
+}
+
+/* Estilos para pantallas pequeñas (tablets) */
+@media (max-width: 768px) {
+    .filter-products {
+        max-width: 100%; /* Ancho máximo del contenedor ocupa el 100% */
+        padding: 20px; /* Reduce el padding interno */
+    }
+
+    .filter-products input,
+    .filter-products select {
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+    }
+
+    .filter-products button {
+        font-size: 16px; /* Tamaño de fuente más pequeño en el botón */
+        padding: 12px 25px; /* Menor padding para ajustar el tamaño */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .filter-products {
+        margin: 15px; /* Reduce el margen externo */
+        padding: 15px; /* Reduce el padding interno */
+    }
+
+    .filter-products input,
+    .filter-products select {
+        font-size: 14px; /* Tamaño de fuente aún más pequeño */
+        padding: 12px; /* Menor padding para los campos */
+    }
+
+    .filter-products button {
+        font-size: 14px; /* Tamaño de fuente más pequeño para el botón */
+        padding: 10px 20px; /* Reduce el padding para ajustarlo al tamaño del móvil */
+    }
+}

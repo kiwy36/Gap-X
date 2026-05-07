@@ -1,0 +1,183 @@
+.statistics-container {
+    padding: 25px;
+    background-color: #f3f4f6; /* Fondo más claro */
+    border-radius: 12px; /* Bordes más redondeados */
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombras más profundas */
+}
+
+/* Estilos generales para la selección de fechas */
+.date-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.date-selector label {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Tamaño de fuente más grande */
+    color: #333; /* Color de texto más oscuro */
+}
+
+.date-selector input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease; /* Transición para enfoque */
+}
+
+.date-selector input:focus {
+    border-color: #007bff; /* Color de borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Efecto de sombra al enfocar */
+}
+
+.date-selector button {
+    padding: 12px 18px;
+    background-color: #28a745; /* Verde llamativo */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Transición para hover */
+    box-shadow: 0px 4px 10px rgba(0, 167, 71, 0.4); /* Sombra suave */
+}
+
+.date-selector button:hover {
+    background-color: #218838; /* Color más oscuro al hacer hover */
+}
+
+/* Sumatoria de ventas */
+.sales-summary, .most-sold-product, .financial-summary, .observations-section {
+    margin-top: 25px;
+}
+
+.sales-summary ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sales-summary li {
+    padding: 15px;
+    background-color: #fff; /* Fondo blanco para cada producto */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición al interactuar */
+}
+
+.sales-summary li:hover {
+    transform: translateY(-3px); /* Efecto de "elevación" */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hover */
+}
+
+.most-sold-product p {
+    padding: 15px;
+    background-color: #e9f7ef; /* Fondo verde claro */
+    border-radius: 8px;
+    font-size: 18px; /* Tamaño de texto más grande */
+    color: #155724; /* Texto verde oscuro */
+}
+
+/* Observaciones */
+.observations-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.observations-section li {
+    padding: 12px;
+    background-color: #f8d7da; /* Fondo rojo claro */
+    color: #721c24; /* Texto rojo oscuro */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
+
+/* Resumen Financiero */
+.financial-summary p {
+    padding: 12px;
+    background-color: #fff3cd; /* Fondo amarillo claro */
+    color: #856404; /* Texto amarillo oscuro */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Ajustes de contenedor */
+    .statistics-container {
+        padding: 20px;
+        max-width: 100%;
+        box-shadow: none;
+        margin: 0 10px;
+    }
+
+    /* Estilo para los inputs de fecha en columnas */
+    .date-selector {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .date-selector label {
+        font-size: 16px;
+    }
+
+    .date-selector input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .date-selector button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Ajustes de la lista de ventas */
+    .sales-summary ul {
+        padding: 0;
+    }
+
+    .sales-summary li {
+        padding: 12px;
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .most-sold-product p, .observations-section li, .financial-summary p {
+        font-size: 16px;
+    }
+}
+
+/* Media query para pantallas extra pequeñas (móviles de menor tamaño) */
+@media (max-width: 480px) {
+    .statistics-container {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .date-selector {
+        gap: 8px;
+    }
+
+    .date-selector button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .sales-summary li {
+        font-size: 14px;
+    }
+
+    .most-sold-product p, .observations-section li, .financial-summary p {
+        font-size: 14px;
+    }
+}

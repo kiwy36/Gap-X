@@ -1,0 +1,141 @@
+/* Contenedor principal */
+.store-container {
+    padding: 20px; /* Espacio alrededor del contenido */
+    max-width: 800px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+    background-color: #f9f9f9; /* Fondo claro para un contraste suave */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+/* Título principal */
+.store-title {
+    font-size: 28px; /* Aumentar el tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 20px; /* Separación inferior */
+    text-align: center; /* Centra el texto */
+    color: #333; /* Color de texto oscuro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil para el texto */
+}
+
+/* Resumen de ventas */
+.store-summary {
+    background-color: #1877f2; /* Color azul vibrante */
+    color: white; /* Texto blanco para contraste */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Separación inferior */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #318ef2; /* Borde azul más oscuro */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Sombra para dar efecto de flotación */
+    text-align: center; /* Centra el contenido */
+    font-size: 18px; /* Aumenta el tamaño del texto */
+}
+
+/* Lista de productos en grid */
+.cart-list {
+    display: grid; /* Usa el grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adaptable en pantallas pequeñas */
+    gap: 20px; /* Espaciado entre productos */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Cada producto del carrito */
+.cart-product {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #ddd; /* Borde suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar sensación de profundidad */
+    display: flex; /* Flexbox para alinear los elementos */
+    flex-direction: column; /* Alinea verticalmente */
+    gap: 10px; /* Espaciado entre elementos */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    text-align: center; /* Centra el texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
+}
+
+/* Añade efecto de hover en cada producto */
+.cart-product:hover {
+    background-color: #cccccc;
+    transform: translateY(-5px); /* Mueve el producto hacia arriba */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Estilo para los párrafos de los productos */
+.cart-product p {
+    word-wrap: break-word;  /* Permite el corte de palabras largas */
+    word-break: break-word; /* Fuerza a que las palabras muy largas se partan */
+    white-space: normal;    /* Permite que el texto baje de línea cuando es necesario */
+    color: #444; /* Color del texto ligeramente más oscuro */
+}
+
+/* Botón para eliminar producto */
+.remove-btn {
+    background-color: #ff4d4f; /* Rojo brillante para resaltar el botón */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    font-weight: bold; /* Resalta el texto */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Añade sombra */
+}
+
+.remove-btn:hover {
+    background-color: #e60000; /* Rojo más oscuro en hover */
+    transform: scale(1.05); /* Efecto de agrandar un poco el botón */
+}
+
+/* Botón para enviar la comanda */
+.send-order-btn {
+    display: block; /* Toma todo el ancho disponible */
+    width: 100%; /* Ancho completo */
+    padding: 15px; /* Espaciado interno */
+    background-color: #28a745; /* Verde brillante */
+    color: white; /* Texto blanco */
+    font-size: 18px; /* Tamaño de texto más grande */
+    font-weight: bold; /* Negrita para resaltar */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    text-align: center; /* Centra el texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade sombra */
+}
+
+.send-order-btn:disabled {
+    background-color: #ccc; /* Color gris cuando está deshabilitado */
+    cursor: not-allowed; /* Cursor de no permitido */
+}
+
+.send-order-btn:hover:not(:disabled) {
+    background-color: #218838; /* Verde más oscuro en hover */
+    transform: translateY(-3px); /* Movimiento hacia arriba */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Añade más sombra */
+}
+
+/* Carrito vacío */
+.empty-cart {
+    font-size: 18px; /* Aumenta el tamaño del texto */
+    color: #888; /* Color gris suave */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Añade espacio superior */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .store-container {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .cart-product {
+        padding: 15px; /* Reduce el espaciado interno */
+    }
+
+    .send-order-btn {
+        font-size: 16px; /* Reduce el tamaño del texto del botón */
+        padding: 12px; /* Reduce el padding del botón */
+    }
+}
