@@ -4,13 +4,13 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDpYKd2THBfb1G2yielspWITpMW23bQkn8",
-  authDomain: "gap001-312e3.firebaseapp.com",
-  projectId: "gap001-312e3",
-  storageBucket: "gap001-312e3.appspot.com",
-  messagingSenderId: "217606666961",
-  appId: "1:217606666961:web:bdba8692d5d0b66c0de3f0",
-  measurementId: "G-82W2QHXVHE"
+  apiKey: "AIzaSyASBJAKz7L5tri5vAqU8CoR8xlx-k-EnXg",
+  authDomain: "gap-x-e7deb.firebaseapp.com",
+  projectId: "gap-x-e7deb",
+  storageBucket: "gap-x-e7deb.firebasestorage.app",
+  messagingSenderId: "74158737941",
+  appId: "1:74158737941:web:6364360aec7327efcd9c1c",
+  measurementId: "G-Q89TXV8SYQ"
 };
 
 const app = initializeApp(firebaseConfig);
