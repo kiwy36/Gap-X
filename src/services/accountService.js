@@ -1,9 +1,8 @@
-// src/services/accountService.js
-import { db, auth } from '../firebase';
+import { db, auth } from './firebase';
 // eslint-disable-next-line no-unused-vars
-import { doc, setDoc, getDoc, getDocs, collection, query, where, updateDoc, deleteDoc, addDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, getDoc, getDocs, collection, query, where, updateDoc } from 'firebase/firestore';
 
-// Crear una nueva cuenta (solo para administrador)
+// Crear nueva cuenta (solo para admin)
 export const createAccount = async (accountId, adminId, adminEmail, empresaNombre) => {
   try {
     const accountRef = doc(db, 'Accounts', accountId);
@@ -11,7 +10,7 @@ export const createAccount = async (accountId, adminId, adminEmail, empresaNombr
       adminId: adminId,
       adminEmail: adminEmail,
       nombreEmpresa: empresaNombre,
-      fechaCreacion: serverTimestamp(),
+      fechaCreacion: new Date().toISOString(),
       plan: 'basic'
     });
     return { success: true, accountId };
@@ -52,16 +51,16 @@ export const isAdmin = async () => {
   }
 };
 
-// Obtener cuenta actual del usuario (admin o sub-usuario)
+// Obtener cuenta actual
 export const getCurrentAccount = async () => {
   if (!auth.currentUser) return null;
   
   try {
-    // Primero verificar si es admin
+    // Verificar si es admin
     const adminAccount = await getAccountByAdminId(auth.currentUser.uid);
     if (adminAccount) return { ...adminAccount, role: 'admin' };
     
-    // Si no es admin, buscar en sub-usuarios
+    // Buscar en sub-usuarios
     const accountsRef = collection(db, 'Accounts');
     const accountsSnapshot = await getDocs(accountsRef);
     

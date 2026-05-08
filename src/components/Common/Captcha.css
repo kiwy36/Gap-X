@@ -1,0 +1,27 @@
+.captcha-container {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.captcha-button {
+  background-color: #f0f0f0;
+  border: 1px solid #d3d3d3;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.captcha-button:hover {
+  background-color: #e0e0e0;
+}
+
+.captcha-verified {
+  color: #4CAF50;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  display: inline-block;
+}

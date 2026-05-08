@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../services/firebase.js';
 import Login from '../Login/Login';
-import Register from '../Register/Register';
 import './Home.css';
 
 const Home = () => {
@@ -59,7 +58,6 @@ const Home = () => {
             ) : (
                 <div className="auth-section">
                     <Login />
-                    <Register />
                 </div>
             )}
         </div>
