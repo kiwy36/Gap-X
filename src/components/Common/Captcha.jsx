@@ -17,7 +17,7 @@ const Captcha = ({ onVerify }) => {
         </button>
       ) : (
         <div className="captcha-verified">
-          ✓ Verificado
+          ✓ Verificadodasdadas
         </div>
       )}
     </div>
